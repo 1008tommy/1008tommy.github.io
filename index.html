@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique Hotel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Château Herald</title>
+    <link rel="stylesheet" href="Nav.css" />
+  </head>
+  <body>
     <header>
-        <h1>Boutique Hotel</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#rooms">Rooms & Suites</a></li>
-                <li><a href="#offers">Special Offers</a></li>
-                <li><a href="#contact">Contact</a></li>
+      <div class="image-overlay">
+        <img src="black.jpg" alt="Overlay Image" />
+        <div class="overlay">
+          <nav id="topbar">
+            <div class="logo">
+              <ul id="logoname">
+              <li><h1>Château Herald</h1></li>
+              <li>Singapore</li>
+              </ul>
+            </div>
+            <nav class="navigation" id="top">
+              <ul class="navbar">
+                <li><a href="#">Sign in</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Book</a></li>
+              </ul>
+            </nav>
+          </nav>
+
+          <nav id="bottom" class="navigation">
+            <ul id="navbottom" class="navbar">
+              <li><a href="#" id="active">Home</a></li>
+              <li><a href="#">Rooms and Suites</a></li>
+              <li><a href="#">Events and Catering</a></li>
+              <li><a href="#">Dining</a></li>
+              <li><a href="#">Amenities</a></li>
+              <li><a href="#">Promotions</a></li>
+              <li><a href="#">About Us</a></li>
             </ul>
-        </nav>
+          </nav>
+        </div>
+      </div>
     </header>
 
-    <section id="hero">
-        <h2>Welcome to Boutique Hotel</h2>
-        <p>Experience luxury and comfort with a unique style.</p>
-        <button onclick="showMessage()">Check Availability</button>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Learn more about our unique approach to hospitality and design.</p>
-    </section>
-
-    <section id="offers">
-        <h2>Special Offers</h2>
-        <p>Explore our latest deals and promotions designed just for you.</p>
-    </section>
-
+    <main></main>
     <footer>
-        <p>&copy; 2024 Boutique Hotel. All rights reserved.</p>
+      <p>&copy; Château Herald 2023</p>
     </footer>
-
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
