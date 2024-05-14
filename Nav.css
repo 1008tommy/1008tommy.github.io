@@ -6,11 +6,11 @@
   text-decoration: none;
 }
 
-body {
+.body {
   width: 100%;
 }
 
-#topbar {
+.topbar {
   align-items: center;
   display: flex;
   width: 100%;
@@ -23,21 +23,20 @@ body {
   color: white;
 }
 
-.logo #logoname li h1 {
+.logo .logo__name-item h1 {
   font-size: 30px;
 }
 
-.logo #logoname li {
+.logo .logo__name-item {
   font-size: 15px;
 }
 
-#logoname {
+.logo__name {
   list-style: none;
 }
 
-#top {
+.top {
   padding: 20px;
-  float: right;
 }
 
 .navigation {
@@ -47,23 +46,22 @@ body {
   align-items: center;
 }
 
-#bottom {
+.bottom {
   border-color: white;
   border-top-style: groove;
-  clear: both;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 9998;
 }
 
-.navbar li {
+.navbar__item {
   list-style: none;
   display: inline-block;
   padding: 0 20px;
 }
 
-.navbar li a {
+.navbar__item-link {
   display: flex;
   margin: 5px;
   color: white;
@@ -73,26 +71,26 @@ body {
   transition: 0.3s ease;
 }
 
-.navbar li a:hover {
+.navbar__item-link:hover {
   color: #ff5f1f;
 }
 
-.navbar li #active {
+.navbar__item-link--active {
   color: #ff5f1f;
 }
 
-main {
+.main {
   padding: 20px;
 }
 
-footer {
+.footer {
   text-align: center;
   padding: 10px;
 }
 
 .image-overlay {
   position: relative;
-  display: Block;
+  display: block;
   width: 100%;
 }
 
