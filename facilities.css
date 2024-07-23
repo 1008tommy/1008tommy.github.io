@@ -1,0 +1,201 @@
+#background-opener {
+    background-image: url(images/opener.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 350px;
+}
+
+#opener-text {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30%;
+}
+
+#opener-text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-size: 2em;
+    font-style: normal;
+    color: white;
+}
+
+#opener-text h2 {
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: rgb(220, 220, 220);
+}
+
+.stylish {
+    font-style: italic;
+}
+
+#facility-intro {
+    background-color: #E2E0D1;
+    padding: 20px;
+    padding-bottom: 320px;
+    text-align: center;
+}
+
+#facility-intro h2 {
+    font-weight: 100;
+    font-size: 3em;
+    margin: 40px auto;
+}
+
+#facility-intro p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    width: 370px;
+    height: 10px;
+    min-width: 350px;
+    margin: 0 auto;
+    font-weight: 10;
+    font-size: large;
+}
+
+.facilities-options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-around;
+}
+
+.facilities-option {
+    width: 35%;
+    min-width: 300px;
+    padding: 0;
+    margin: 40px;
+    color: rgb(38, 38, 38);
+}
+
+.facilities-option h3 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 300;
+    font-size: xx-large;
+    text-align: left;
+    margin: 15px 0px;
+}
+
+.facilities-option p {
+    text-align: left;
+}
+
+.facilities-img {
+    width: 500px;
+    height: auto;
+    min-width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+.facilities-option p a {
+    color: rgb(84, 84, 83);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1.5px solid rgb(84, 84, 83);
+}
+
+.facilities-option p a:hover {
+    border-style: none;
+    color: black;
+}
+
+.facilities-option > img{
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 700px;
+}
+
+@keyframes fadein{
+    from {scale: 0.8; opacity: 0;}
+    to { scale: 1; opacity: 1;}
+}
+
+#pool,
+#spa,
+#Gym,
+#Art > img{
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 300px;
+}
+
+#pool,
+#spa,
+#Gym,
+#Art{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E2E0D1;
+    min-height: 600px;
+}
+
+#Gym, 
+#Art{
+    background-color: #e7e7e7;
+    flex-wrap: wrap-reverse;
+}
+
+#pool img,
+#spa img,
+#Gym img,
+#Art img{
+    height: 400px;
+    width: auto;
+    aspect-ratio: 3 / 2.2;
+    margin-top: 20px;
+}
+
+#Gym img ,
+#Art img{
+    order: 2;
+}
+
+#pool #info,
+#spa #info,
+#Gym #info,
+#Art #info{
+    width: 35%;
+}
+
+#Gym #info,
+#Art #info {
+    order: 1;
+}
+
+#info h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.reserve-button {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: large;
+    padding: 8px 20px;
+    border: 1px solid rgb(38, 38, 38);
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.reserve-button:hover {
+    color: rgb(139, 139, 139);
+    background-color: rgb(236, 230, 223);
+}

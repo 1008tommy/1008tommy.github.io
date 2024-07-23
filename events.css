@@ -1,0 +1,205 @@
+
+#background {
+    background-image: url(images/weddings6.jpg);
+    background-size: cover;
+    position: relative;
+    height: 350px;
+    background-position: center;
+}
+
+#background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+#header-text {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30%; 
+    z-index: 1;
+}
+
+#header-text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-size: 4em;
+    padding-bottom: 30px;
+}
+
+#header-text p {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+#header-text h2 {
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: rgb(210, 210, 210);
+    text-align: center;
+}
+
+#stylish {
+    font-style: italic;
+}
+
+#events-intro {
+    background-color: #E2E0D1;
+    padding: 20px;
+    padding-bottom: 125px;
+    text-align: center;
+}
+
+#events-intro h2 {
+    font-weight: 100;
+    font-size: 3em;
+}
+
+#events-intro p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    width: 370px;
+    min-width: 350px;
+    margin: 0 auto;
+    font-weight: 10;
+    font-size: large;
+}
+
+.event-options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-around;
+}
+
+/* fadein is just the name */
+/* from and to basically sets the before and after of the animation */
+@keyframes fadein{
+    from {scale: 0.8; opacity: 0;}
+    to { scale: 1; opacity: 1;}
+}
+
+/* linear allows for the same speed during a transition from start to end */
+/* view allows for the animation to start when it enters the viewport and ends when its no longer in the viewport */
+/* cover basically means that when the image is entering viewport, animation begins */
+/* animation range ends means the animation will end at x amount of px from the bottom */
+#events, #theatre, .event-option{
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 500px;
+}
+
+.event-option {
+    width: 40%;
+    min-width: 300px;
+    padding: 0;
+    margin: 40px;
+    color: rgb(38, 38, 38);
+}
+
+.event-option h3 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 300;
+    font-size: xx-large;
+    text-align: left;
+    margin: 15px 0px;
+}
+
+.event-option p {
+    text-align: left;
+}
+
+.dining-img {
+    width: 350px;
+    height: auto;
+    min-width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+.event-option p a {
+    color: rgb(84, 84, 83);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1.5px solid rgb(84, 84, 83);
+}
+
+.event-option p a:hover {
+    border-style: none;
+    color: black;
+}
+
+#events, #theatre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E2E0D1;
+    min-height: 600px;
+}
+
+#theatre {
+    background-color:#e7e7e7;
+    flex-wrap: wrap-reverse;
+}
+
+
+#events img, #room-service img, #theatre img{
+    height: 400px;
+    width: auto;
+    aspect-ratio: 3 / 2.2;
+    margin-top: 20px;
+}
+
+#theatre img {
+    order: 2;
+}
+
+#events #info, #room-service #info, #theatre #info{
+    width: 35%;
+}
+
+#theatre #info {
+    order: 1;
+}
+
+#info h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.reserve-button {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: large;
+    padding: 8px 20px;
+    border:1px solid rgb(38, 38, 38);
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.reserve-button:hover {
+    color:rgb(68, 68, 68);
+    background-color:antiquewhite;
+}
+

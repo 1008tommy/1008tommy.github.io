@@ -1,0 +1,179 @@
+
+#background {
+    background-image: url(images/about-us-2.png);
+    background-position-y: 55%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 350px;
+}
+
+#header-text {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30%; 
+}
+
+#header-text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2em;
+    color: white;
+}
+
+#header-text h2 {
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: rgb(210, 210, 210);
+}
+
+.stylish {
+    font-style: italic;
+}
+
+#hotel-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    min-height: 600px;
+}
+
+#hotel-info img {
+    height: auto;
+    width: 35vw;
+}
+
+#hotel-info #info{
+    width: 40%;
+}
+
+#info h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.founder-intro {
+    background-color: #E2E0D1;
+    width: 100%;
+}
+
+.founder-intro h1 {
+    font-size: 2.5em;
+    padding: 40px;
+    text-align: center;
+    color:rgb(50, 50, 50);
+}
+
+.founders-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.founder-info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    min-width: 300px;
+    padding: 50px 100px;
+    color: rgb(38, 38, 38);
+}
+
+.founder-info img {
+    border: 3px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.founder-info h3 {
+    font-family: "Sedan SC", serif;
+    font-weight: 300;
+    font-size: xx-large;
+    text-align: left;
+    margin: 15px 0px 2px 0px;
+    text-align: center;
+}
+
+.founder-info h4 {
+    font-family: "Sedan SC", serif;
+    margin-bottom:15px;
+}
+
+.founder-info p {
+    text-align: center;
+}
+
+.founder-img {
+    width: auto;
+    height: 200px;
+}
+
+hr {
+    border: 2px solid rgba(0,0,0,0.5);
+    width: 7%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+@keyframes fadein{
+    from {scale: 0.7; opacity: 0;}
+    to { scale: 1; opacity: 1;}
+}
+
+.founder-info {
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 400px;
+}
+
+@media screen and (max-width:768px) {
+    #header-text {
+        width: 100%;
+        margin-left: -50%;
+    }
+    
+    #hotel-info img {
+        height: auto;
+        width: 70vw;
+        margin: 40px;
+    }
+
+    #hotel-info #info {
+        width: 70vw;
+    }
+
+    #hotel-info {
+        align-content: flex-start;
+    }
+
+    #info p {
+        padding-bottom: 60px;
+    }
+
+    hr {
+        margin-bottom: 0;
+    }
+
+    .founder-info {
+        padding: 0;
+        margin: 50px;
+    }
+}

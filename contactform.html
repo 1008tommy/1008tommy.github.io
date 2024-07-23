@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Château Herâld - Contact Us</title>
+    <link rel="stylesheet" href="common.css" type="text/css" />
+    <link rel="shortcut icon" href="images\icon.png" alt="icon">
+    <link rel="stylesheet" href="contactform.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <section id="top">
+        <div class="logo">
+          <ul class="logo__name">
+            <li><h1>Château Herâld</h1></li>
+            <li>Singapore</li>
+          </ul>
+        </div>
+
+        <div id="navigation_top">
+          <ul class="navbar">
+            <li class="navbar_item">
+              <a href="contactform.html" id="current-page">Contact Us</a>
+            </li>
+            <li class="navbar_item"><a href="roombooking.html">Book a Stay</a></li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <section id="sticky_nav">
+      <nav id="navigation_bottom">
+        <ul class="navbar">
+          <li class="navbar_item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="navbar_item"><a href="suites.html">Suites</a></li>
+          <li class="navbar_item"><a href="events.html">Events</a></li>
+          <li class="navbar_item"><a href="dining.html">Dining</a></li>
+          <li class="navbar_item"><a href="Facilities.html">Amenities</a></li>
+          <li class="navbar_item"><a href="aboutus.html">About Us</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <div id="background">
+      <section id="header-text">
+        <h1>CONTACT US</h1>
+      </section>
+    </div>
+
+    <section id="contact-form">
+      <h2>Contact Form</h2>
+      <p>Have a question or feedback? Drop us a message below.</p>
+      <form action="contactform-processor.html" method="GET" id="main-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            minlength="2"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="\d{8}"
+            placeholder="Your 8-digit contact number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="E.g. Questions, feedback, etc."
+          ></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <section class="footer-content">
+        <section class="contact-info" id="contacts">
+          <h1>Contact Infomation</h1>
+          <p>Email: info@chateauherald.com</p>
+          <p>Location: 123 Main St, Singapore</p>
+          <p>Phone: +65 1234 5678</p>
+        </section>
+        <section class="social-media" id="socials">
+          <h1>Socials</h1>
+          <div class="icons">
+            <a href="https://www.facebook.com/chateauherald"
+              ><i class="fa-brands fa-square-facebook"></i>@Château Herald</a
+            >
+            <a href="https://www.tiktok.com/chateauherald"
+              ><i class="fa-brands fa-tiktok"></i>@Herald Hotel</a
+            >
+            <a href="https://www.instagram.com/chateauherald"
+              ><i class="fa-brands fa-instagram"></i>@Château Hotel</a
+            >
+            <!-- Add more social media links as needed -->
+          </div>
+        </section>
+        <section class="quick-links">
+          <h1>Quick Links</h1>
+          <ul>
+            <li><a href="suites.html">Suites</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="Facilities.html">Amenities</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </section>
+      </section>
+
+      <div class="footer-end">
+        <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
