@@ -12,22 +12,16 @@ function hamburgerIcon() {
 
 // Function to be executed when the hamburger icon is clicked
 function onHamburgerIconClick() {
-    const navbar = document.getElementById('navbar');
+    const sidebar = document.getElementById('sidebar_off_screen');
     console.log('Hamburger icon clicked'); // Debugging line
-    if (navbar.style.display === 'flex') {
-        navbar.style.display = 'none';
-    } else {
-        navbar.style.display = 'flex';
-        navbar.style.flexDirection = 'column'; // Ensure the menu items stack vertically
-    }
+    sidebar.classList.toggle('show');
 }
 
 // Function to be executed when the window is resized
 function onWindowResize() {
-    const navbar = document.getElementById('navbar');
+    const sidebar = document.getElementById('sidebar_off_screen');
     if (window.innerWidth > 768) { // Adjust the threshold as needed
-        navbar.style.display = '';
-        navbar.style.flexDirection = '';
+        sidebar.classList.remove('show');
     }
 }
 
