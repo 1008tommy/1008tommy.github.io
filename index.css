@@ -36,44 +36,26 @@ video, .our-history img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
 }
 
 .overlay-text h1 {
-  font-size: 70px;
+  font-size: 8vw;
   padding-bottom: 10px;
 }
 
 .overlay-text h2 {
-  font-size: 20px;
+  font-size: 2vw;
   padding-bottom: 25px;
   color: #e2e0d1;
 }
 
 .overlay-text p {
-  font-size: 19px;
+  font-size: 2vw;
   color: white;
 }
 
 @media screen and (max-width: 768px) {
-
-  .overlay-text{
-    width:100%;
-  }
-
-  .overlay-text h1 {
-    font-size: 8vh; /* adjust this value as needed */
-    padding-bottom: 1px; /* adjust this value as needed */
-  }
-
-  .overlay-text h2 {
-    font-size: 2.5vh; /* adjust this value as needed */
-    padding-bottom: 10px; /* adjust this value as needed */
-  }
-
-  .overlay-text p {
-    font-size: 2.7vh; /* adjust this value as needed */
-    width: 70%;
-  }
 }
 
 /* The code below is for main element*/
@@ -215,7 +197,7 @@ main {
 }
 
 .suites-text h2 {
-  font-size: 2.5em;
+  font-size: 2.5vw;
   font-weight: bold;
 }
 
