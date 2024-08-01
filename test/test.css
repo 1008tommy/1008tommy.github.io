@@ -1,0 +1,15 @@
+#top {
+    padding: 0px 20px; 
+    display: flex;
+    background-color: #e2e0d1;
+    min-width: 300px;
+    min-height: 100px;
+    height: 10vh;
+  }
+
+  .navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
