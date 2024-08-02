@@ -1,0 +1,72 @@
+.video-container, .our-history .img-container {
+    position: relative; /* This container become the reference point for the child container */
+    width: 100%; /* This will make the video cover the whole area */
+    overflow: hidden; /* This will hide the overflowing content */
+  }
+  
+  .video-container::after, .our-history .img-container::after {
+    content: ""; /* This will create a pseudo-element */
+    position: absolute; /* the reference point is the parent container */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.6); /* adjust the last value to change the opacity */
+  }
+  
+  video, .our-history img {
+    /* Set the size of the video */
+    width: 100%;
+    height: auto; /* vh stands for viewport height */
+    object-fit: cover; /* This will cover the whole area without distorting the aspect ratio */
+    display: block; /* This will remove the default space below the video */
+  }
+  
+  .overlay-text {
+    position: absolute;
+    /* used to center the text both vertically and horizontally */
+    top: 40%;
+    left: 50%;
+    transform: translate(
+      -50%,
+      -50%
+    ); /* This will center the text by moving left by 50% of its own width and up by 50% of its own height */
+    color: #e2e0d1;
+    z-index: 1; /* make sure the text is on top of the overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .overlay-text h1 {
+    font-size: 6vw;
+    padding-bottom: 10px;
+  }
+  
+  .overlay-text h2 {
+    font-size: 1.5vw;
+    padding-bottom: 25px;
+    color: #e2e0d1;
+  }
+  
+  .overlay-text p {
+    font-size: 1.5vw;
+    color: white;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .overlay-text h1 {
+      font-size: 7vw;
+    }
+  
+    .overlay-text h2 {
+      font-size: 2vw;
+    }
+  
+    .overlay-text p {
+      font-size: 2vw;
+    }
+  }
+  
+ 

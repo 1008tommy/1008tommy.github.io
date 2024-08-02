@@ -268,4 +268,9 @@
     border-bottom: 2px solid #000;
     border-top: 2px solid #000;
   }
+
+  #top {
+    /* top bar height */
+    min-height: 60px;
+  }
 }
