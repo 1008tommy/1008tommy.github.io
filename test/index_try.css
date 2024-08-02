@@ -1,74 +1,203 @@
-.video-container, .our-history .img-container {
-    position: relative; /* This container become the reference point for the child container */
-    width: 100%; /* This will make the video cover the whole area */
-    overflow: hidden; /* This will hide the overflowing content */
-  }
-  
-  .video-container::after, .our-history .img-container::after {
-    content: ""; /* This will create a pseudo-element */
-    position: absolute; /* the reference point is the parent container */
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0,0,0,0.6); /* adjust the last value to change the opacity */
-  }
-  
-  video, .our-history img {
-    /* Set the size of the video */
-    width: 100%;
-    height: auto; /* vh stands for viewport height */
-    object-fit: cover; /* This will cover the whole area without distorting the aspect ratio */
-    display: block; /* This will remove the default space below the video */
-  }
-  
-  .overlay-text {
-    position: absolute;
-    /* used to center the text both vertically and horizontally */
-    top: 40%;
-    left: 50%;
-    transform: translate(
-      -50%,
-      -50%
-    ); /* This will center the text by moving left by 50% of its own width and up by 50% of its own height */
-    color: #e2e0d1;
-    z-index: 1; /* make sure the text is on top of the overlay */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-  }
-  
+.video-container,
+.our-history .img-container {
+  position: relative; /* This container become the reference point for the child container */
+  width: 100%; /* This will make the video cover the whole area */
+  overflow: hidden; /* This will hide the overflowing content */
+}
+
+.video-container::after,
+.our-history .img-container::after {
+  content: ""; /* This will create a pseudo-element */
+  position: absolute; /* the reference point is the parent container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* adjust the last value to change the opacity */
+}
+
+video,
+.our-history img {
+  /* Set the size of the video */
+  width: 100%;
+  height: auto; /* vh stands for viewport height */
+  object-fit: cover; /* This will cover the whole area without distorting the aspect ratio */
+  display: block; /* This will remove the default space below the video */
+}
+
+.overlay-text {
+  position: absolute;
+  /* used to center the text both vertically and horizontally */
+  top: 40%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* This will center the text by moving left by 50% of its own width and up by 50% of its own height */
+  color: #e2e0d1;
+  z-index: 1; /* make sure the text is on top of the overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.overlay-text h1 {
+  font-size: 6vw;
+  padding-bottom: 10px;
+}
+
+.overlay-text h2 {
+  font-size: 1.5vw;
+  padding-bottom: 25px;
+  color: #e2e0d1;
+}
+
+.overlay-text p {
+  font-size: 1.5vw;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
   .overlay-text h1 {
-    font-size: 6vw;
+    font-size: 6.5vw;
+    padding-bottom: 5px;
+  }
+
+  .overlay-text h2 {
+    font-size: 2.3vw;
     padding-bottom: 10px;
   }
-  
-  .overlay-text h2 {
-    font-size: 1.5vw;
-    padding-bottom: 25px;
-    color: #e2e0d1;
-  }
-  
+
   .overlay-text p {
-    font-size: 1.5vw;
-    color: white;
+    font-size: 2vw;
   }
-  
-  @media screen and (max-width: 768px) {
-    .overlay-text h1 {
-      font-size: 7vw;
-      padding-bottom: 5px;
-    }
-  
-    .overlay-text h2 {
-      font-size: 3vw;
-      padding-bottom: 10px;
-    }
-  
-    .overlay-text p {
-      font-size: 3vw;
-    }
+}
+
+/* The code below is for the suites section element */
+
+.suites,
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 300px;
+}
+
+.suites-content {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  max-width: 1200px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.suites-content img {
+  width: 40%;
+  padding: 0 50px; /* Add space between image and text */
+  object-fit: cover;
+}
+
+.suites-text {
+  width: 50%;
+  padding-left: 20px; /*to add some space between the image and the text */
+}
+
+.suites-text h2 {
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+.suites-text h4 {
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+.suites-text p {
+  font-size: 1.3vw;
+  padding-bottom: 30px;
+  width: 90%;
+}
+
+.suites-text a,
+.events-text a,
+.option a {
+  color: #3d4a48;
+  border-bottom: 1px solid #0c1f1e33;
+  padding-top: 30px;
+  padding-bottom: 4px;
+  text-decoration: none;
+  font-size: 1.2vw;
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+
+.suites-text a:hover,
+.events-text a:hover,
+.option a:hover {
+  color: black;
+  border-bottom: 1px solid #3d4a48;
+  transform: scale(1.1);
+}
+
+/* CSS for smaller screens */
+@media screen and (max-width: 768px) {
+  .suites-content {
+    flex-direction: column;
+    align-items: normal;
   }
-  
- 
+
+  .suites-content img {
+    width: 100%; /* Image takes full width on smaller screens */
+    padding: 0 0; /* Remove right padding */
+    padding-bottom: 20px; /* Add bottom padding for spacing */
+  }
+
+  .suites-text {
+    width: 100%; /* Text takes full width on smaller screens */
+    padding-left: 0; /* Remove left padding */
+  }
+
+  .suites-text h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .suites-text h4 {
+    font-size: 0.9em;
+  }
+}
+
+/* End of Suites Section */
+
+/* Smooth Flow */
+.suites,
+.our-history,
+.experience {
+  animation: fadein linear; /* fadein is the name of the animation and linear is the timing fucntion, so constant speed*/
+  animation-timeline: view(
+
+  ); /* view() is the name of the timeline where it is the animation is tied to the view or scoll position */
+  animation-range-start: cover; /* cover is the starting point of the animation, animation should start as soon as the element is fully in view */
+  animation-range-end: 450px; /* the end point of the animation, animation should end when the element is 500px out of view */
+}
+
+@keyframes fadein {
+  from {
+    scale: 0.7;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
