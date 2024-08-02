@@ -58,14 +58,16 @@
   @media screen and (max-width: 768px) {
     .overlay-text h1 {
       font-size: 7vw;
+      padding-bottom: 5px;
     }
   
     .overlay-text h2 {
-      font-size: 2vw;
+      font-size: 3vw;
+      padding-bottom: 15px;
     }
   
     .overlay-text p {
-      font-size: 2vw;
+      font-size: 3vw;
     }
   }
   
