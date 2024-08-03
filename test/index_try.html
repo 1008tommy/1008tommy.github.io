@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Château Herâld - Home</title>
     <link rel="stylesheet" href="index_nav_bar.css" type="text/css" />
-    <link rel="stylesheet" href="index_try.css" type="text/css" />
+    <link rel="stylesheet" href="test.css" type="text/css" />
     <link rel="shortcut icon" href="images\icon.png" alt="icon" />
     <link
       rel="stylesheet"
@@ -101,7 +101,14 @@
     <main class="main">
       <section class="suites">
         <div class="suites-content">
-          <img src="../images/standardroom.jpg" alt="Image of our Suite" />
+          <div class="image-container">
+            <div class="wrapper">
+              <img src="../images/standardroom.jpg" alt="Image of our Suite" />
+              <img src="../images/deluxeroom.jpg" alt="Image of our Suite" />
+              <img src="../images/roombig.jpg" alt="Image of our Suite" />
+              <img src="../images/standardroom.jpg" alt="Image of our Suite" />
+            </div>
+          </div>
           <div class="suites-text">
             <h2>Our Suites</h2>
             <h4>Unparalleled luxury</h4>
@@ -116,7 +123,23 @@
         </div>
       </section>
 
-    
+      <section class="our-history">
+        <section class="img-container" id="history-img-container">
+          <img src="..\images\aboutus.webp" />
+          <div class="overlay-text" id="history-text">
+            <h1>Our History</h1>
+            <h2>Royal Heritage</h2>
+            <p>
+              Château Herald has a rich history that dates back to the 19th
+              century. Originally built as a royal residence, the hotel has been
+              meticulously restored to its former glory, offering a glimpse into
+              the grandeur of a bygone era.
+            </p>
+            <a href="aboutus.html" class="readmore-button">Read More</a>
+          </div>
+        </section>
+      </section>
+      
     <!-- Ensures that DOM is fully loaded before script executes-->
     <script src="burgericon.js"></script>
     <script src="videoEffects.js"></script>

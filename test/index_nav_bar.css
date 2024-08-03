@@ -17,12 +17,6 @@
   font-size: 16px;
 }
 
-body{
-    /* Set minimum width and height */
-    min-width: 320px; /* Adjust as needed */
-    min-height: 480px; /* Adjust as needed */
-}
-
 /* Logo (Château Herâld - Singapore) Styles */
 .logo li h1 {
   /* Size of the name of the hotel */
@@ -42,6 +36,10 @@ body{
 
 /* ------------------------- TOP SECTION ----------------------------- */
 
+header {
+  min-width: 300px;
+}
+
 #top {
   padding: 0px 20px;
   /* Parent container of the elements (logo and top_buttons) inside the top section */
@@ -49,8 +47,7 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: #e2e0d1;
-  min-width: 280px;
-  min-height: 80px;
+  min-height: 70px;
 }
 
 /* ------------------------- NAVBAR STYLES ----------------------------- */
@@ -120,6 +117,7 @@ body{
   background-color: #e2e0d1;
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
+  margin-top: 1px;
 }
 
 /* ------------------------- HAMBURGER ICON ----------------------------- */
@@ -193,7 +191,7 @@ body{
   color: white;
 }
 
-#flex_name li h1{
+.logo li h1{
   font-size: 1.5rem;
 }
 
