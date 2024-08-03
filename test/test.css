@@ -100,7 +100,7 @@ main {
   min-width: 300px;
 }
 
-.suites-content, .option-content {
+.suites-content {
   /* Center the content */
   display: flex;
   align-items: center;
@@ -166,12 +166,12 @@ main {
   width: 100%; /* Image takes full width of the container */
 }
 
-.suites-text, .option-text {
+.suites-text {
   width: 40%;
   padding-left: 100px; /*to add some space between the image and the text */
 }
 
-.suites-text h2, .option-text h2 {
+.suites-text h2 {
   font-size: 3vw;
   font-weight: bold;
 }
@@ -183,7 +183,7 @@ main {
   font-style: italic;
 }
 
-.suites-text p, .option-text p {
+.suites-text p {
   font-size: 1.5vw;
   padding-bottom: 30px;
   width: 90%;
@@ -214,7 +214,7 @@ main {
 
 /* CSS for smaller screens */
 @media screen and (max-width: 768px) {
-  .suites-content, .option-content {
+  .suites-content {
     /* Stack the image and text vertically */
     flex-direction: column;
   }
@@ -225,7 +225,7 @@ main {
     margin: 0; /* Remove left margin */
   }
 
-  .suites-text, .option-text {
+  .suites-text {
     display: flex;
     flex-direction: column; /* Stack text on vertically */
     align-items: center; /* Center text horizontally */
@@ -235,22 +235,22 @@ main {
     padding-left: 0; /* Remove left padding */
   }
 
-  .suites-text h2, .option-text h2 {
+  .suites-text h2 {
     font-size: 2rem;
     font-weight: bold;
   }
 
-  .suites-text h4, .option-text h4 {
+  .suites-text h4 {
     font-size: 0.8rem;
   }
 
-  .suites-text p, .option-text p {
+  .suites-text p{
     width: 70%;
     font-size: 0.95rem;
     padding-bottom: 10px;
   }
 
-  .suites-text a, .option-text a {
+  .suites-text a{
     font-size: 0.8rem;
   }
 }
@@ -310,37 +310,115 @@ main {
 }
 
 /* The code below is for the expereince section element */
-#dining-content {
-  flex-direction: row-reverse;
-}
-.experience {
+
+/* The code below is for the expereince section element */
+
+.experience{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  min-height: 300px;
+  background-color: #e7e7e7;
+  text-align: center;
 }
 
-.experience h1 {
-  font-size: 3vw;
+.experience h1{
+  text-align: left;
+  font-size: 5vh;
   font-weight: bold;
   padding-top: 20px;
-  margin: auto;
 }
 
-.option-text{
-  padding: 0;
+.experience p{
+  padding-top: 20px;
+  width: 60%;
 }
 
-#event-img, #dining-img, #amenities-img {
-  width: 50%;
-  padding-right: 50px;
-}
-
-#event-img img, #dining-img img, #amenities-img img {
+.experience .option p{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 10px 0px;
 }
+
+.experience .option h3{
+  font-size: 3vh; /* adjust accordingly to the parent element font-size */
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.experience-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.option {
+  width: 25%;
+  min-width: 300px;
+  padding: 0;
+  margin: 40px;
+}
+
+.experience-img {
+  width: 100%;
+  height: 55%;
+}
+
+.experience .option-text a{
+  font-size: 1.1vw;
+}
+
+/* CSS for smaller screens */
+@media screen and (max-width: 768px) {
+  .experience p {
+    width: 80%;
+    min-width: 300px;
+    padding: 0px;
+  }
+
+  .option {
+    width: 100%;
+    min-height: 550px;
+    margin: 0px;
+    margin-top: 20px ;
+  }
+
+  .experience-img {
+    width: 70%;
+    min-width: 300px;
+  }
+
+  .experience h1{
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .experience p{
+    font-size: 0.9em;
+  }
+
+  .experience .option-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+  }
+
+  .experience .option-text h3{
+    font-size: 2em;
+  }
+
+  .experience .option-text p{
+    font-size: 0.9em;
+    width: 90%;
+  }
+
+  .experience .option-text a{
+    font-size: 0.8em; 
+  }
+}
+
 
 /* Smooth Flow */
 .suites,

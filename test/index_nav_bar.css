@@ -284,3 +284,128 @@ header {
     font-size: 1rem;
   }
 }
+
+/* Start of footer*/
+footer {
+  background-color: #333;
+  color: white;
+  padding-top: 10px;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.contact-info,
+.social-media,
+.quick-links {
+  width: 30%;
+  flex: 1;
+}
+
+.social-media h1 {
+  font-size: 1.2em;
+  width: 15%;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.contact-info h1 {
+  font-size: 1.2em;
+  width: 40%;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.quick-links h1 {
+  font-size: 1.2em;
+  width: 25%;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.quick-links li {
+  list-style: none;
+  color: white;
+}
+
+.quick-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.social-media a,
+.contact-info p {
+  text-decoration: none;
+  padding: 3px 0px;
+  display: flex;
+  width: 30%;
+  color: white;
+  font-size: 0.9em;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+footer .social-media i {
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+footer .footer-end {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #e2e0d1;
+}
+
+footer .social-media a:hover,
+footer .quick-links li a:hover {
+  /* The color of the link when hovered */
+  color: rgb(93, 92, 92);
+  /* Increase the size of the link when hovered */
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-info,
+  .social-media,
+  .quick-links {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info h1,
+  .social-media h1,
+  .quick-links h1 {
+    font-size: 1.5em;
+    width: 83%;
+  }
+
+  .contact-info p,
+  .social-media .icons {
+    font-size: 1em;
+    width: 83%;
+  }
+
+  .social-media a {
+    width: 100%;
+  }
+
+  .quick-links li {
+    font-size: 1.1em;
+  }
+
+  footer .footer-end {
+    font-size: 1.1em;
+  }
+}
+
+/*End of Footer*/
