@@ -334,7 +334,7 @@ main {
 }
 
 .experience p{
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   padding-top: 20px;
   width: 60%;
 }
@@ -384,7 +384,7 @@ main {
 
   .option {
     width: 100%;
-    min-height: 550px;
+    min-height: 600px;
     margin: 0px;
     margin-top: 20px ;
   }
@@ -410,6 +410,7 @@ main {
     align-items: center;
     width: 60%;
     margin: auto;
+
   }
 
   .experience .option-text h3{
