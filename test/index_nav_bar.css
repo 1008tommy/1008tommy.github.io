@@ -132,7 +132,7 @@ header {
 
 /* Change the color of the hamburger icon when clicked */
 .hamburger-icon:active {
-  color: white
+  color: white;
 }
 
 /* ------------------------- SIDE BAR ----------------------------- */
@@ -171,7 +171,7 @@ header {
   align-items: center;
 }
 
-.ham_item a{
+.ham_item a {
   /* font size of the hamburger menu items */
   font-size: 1rem;
 }
@@ -191,7 +191,7 @@ header {
   color: white;
 }
 
-.logo li h1{
+.logo li h1 {
   font-size: 1.5rem;
 }
 
@@ -253,7 +253,7 @@ header {
     transform: translateX(-50%);
   }
 
-  .logo_name{
+  .logo_name {
     /* Centerlised the 'Singapore' text */
     display: flex;
     flex-direction: column;
@@ -290,40 +290,43 @@ footer {
   background-color: #333;
   color: white;
   padding-top: 10px;
+  min-width: 300px;
 }
 
 footer .footer-content {
   display: flex;
-  justify-content: space-between;
-  padding-left: 20px;
+  flex-wrap: wrap; /* Allow flex items to wrap */
 }
 
 .contact-info,
 .social-media,
 .quick-links {
-  width: 30%;
-  flex: 1;
+  width: 24%;
+  min-width: 190px; /* Ensure a minimum width for each section */
+  margin: 0 auto;
+  text-align: center;
 }
 
-.social-media h1 {
-  font-size: 1.2em;
-  width: 15%;
-  border-bottom: 1px solid white;
-  margin-bottom: 10px;
-}
-
+.quick-links h1,
+.social-media h1,
 .contact-info h1 {
-  font-size: 1.2em;
-  width: 40%;
-  border-bottom: 1px solid white;
+  font-size: 1.2rem;
+  position: relative;
   margin-bottom: 10px;
+  text-align: center; /* Center the content within the container */
 }
 
-.quick-links h1 {
-  font-size: 1.2em;
-  width: 25%;
+.contact-info h1::after,
+.social-media h1::after,
+.quick-links h1::after {
+  content: '';
+  display: block;
+  width: 100px; /* Fixed width for the border */
   border-bottom: 1px solid white;
-  margin-bottom: 10px;
+  position: absolute;
+  bottom: -5px; /* Adjust as needed */
+  left: 50%; /* Center the border */
+  transform: translateX(-50%); /* Center the border */
 }
 
 .quick-links li {
@@ -334,7 +337,7 @@ footer .footer-content {
 .quick-links li a {
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   display: inline-block;
   transition: color 0.3s ease, transform 0.3s;
 }
@@ -344,10 +347,11 @@ footer .footer-content {
   text-decoration: none;
   padding: 3px 0px;
   display: flex;
-  width: 30%;
+  width: 100%;
   color: white;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   transition: color 0.3s ease, transform 0.3s;
+  display: inline-block;
 }
 
 footer .social-media i {
@@ -356,7 +360,7 @@ footer .social-media i {
 }
 
 footer .footer-end {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-align: center;
   margin-top: 20px;
   padding-top: 10px;
@@ -373,38 +377,9 @@ footer .quick-links li a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .contact-info,
-  .social-media,
-  .quick-links {
-    width: 50%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .contact-info h1,
-  .social-media h1,
-  .quick-links h1 {
-    font-size: 1.5em;
-    width: 83%;
-  }
-
-  .contact-info p,
-  .social-media .icons {
-    font-size: 1em;
-    width: 83%;
-  }
-
-  .social-media a {
-    width: 100%;
-  }
-
-  .quick-links li {
-    font-size: 1.1em;
-  }
-
-  footer .footer-end {
-    font-size: 1.1em;
+  footer .footer-content .quick-links {
+    margin: 0 auto;
   }
 }
 
