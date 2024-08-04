@@ -1,226 +1,359 @@
+/* ------------------------- IMPORTED FONTS ----------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
 
+/* ------------------------- GLOBAL STYLES ----------------------------- */
+
 * {
-  /* to make sure that elements have default margins or padding applied by the browser. 
-    This make the layout more consistent across different browsers */
+  /* Ensure that consistentsy of the layout is maintained in all browsers */
   margin: 0;
   padding: 0;
-  /* Font family can be change once we decided what consistent font to use for all html */
+  /* "Playfair Display" is the default (imported) font for the entire website */
   font-family: "Playfair Display", serif;
-  /* box-sizing: border-box; is used to include the padding and border in an element's total width and height
-    so that it doesnt overflow */
-  box-sizing: border-box;
-  font-optical-sizing: auto;
+  /* Default font size for the entire website */
+  font-size: 16px;
 }
 
-/* The below code is for the navigation bar */
+/* ------------------------- TOP SECTION ----------------------------- */
+
+header {
+  min-width: 300px;
+}
 
 #top {
-  /* top and bottom will be 20px, left and right will be 10% of the width of the parent element */
-  padding: 10px 2%;
+  padding: 0px 20px;
+  /* Parent container of the elements (logo and top_buttons) inside the top section */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Color of the background element */
   background-color: #e2e0d1;
-  height: 75px;
+  min-height: 70px;
 }
 
-#sticky_nav {
-  /* make the navigation bar follow along when scolling down */
-  position: sticky;
-  /* make the navigation bar be at the top of the page */
-  top: 0;
-  /* z-index is used to make sure that the overlay is on top of the other elements */
-  z-index: 9999;
-  background-color: #e2e0d1;
-  border-bottom: 2px solid #000; /* adjust as needed */
-  border-top: 2px solid #000;
-  /* To prevent text from appearing right on top of the nav bar */
-  margin-top: 1px;
-}
+/* ------------------------- NAVBAR STYLES ----------------------------- */
 
-#navigation_bottom {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
+/* Logo (Château Herâld - Singapore) Styles */
 .logo li h1 {
   /* Size of the name of the hotel */
-  font-size: 30px;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .logo li {
-  /* Singapore text undeneth the name of hotel */
-  font-size: 15px;
+  /* 'Singapore' text undeneth the name of hotel */
+  font-size: 0.8rem;
 }
 
-.logo__name {
+.logo_name {
   /* Remove the bullet point */
   list-style: none;
 }
 
 .navbar {
-  /* Make the ordered list horizontol */
+  /* Flexbox layout for the (top and bottom navigation) buttons*/
+  /* The buttons will be displayed in a row */
   display: flex;
-  /* The space inbetween logo and this element */
-  margin: 2px;
-  list-style-type: none;
-  /* Even space between each navbar item */
   justify-content: space-around;
-  width: 100%;
+  /* Remove the bullet points */
+  list-style-type: none;
+  /* The spacing on the top and button of the buttons */
+  margin: 5px 0;
 }
 
-#top .navbar li {
-  /* The space inbetween the ordered items */
-  margin: 0px 20px;
-  font-weight: bold;
+.navbar_item a {
+  /* Remove the underline from the links */
+  text-decoration: none;
+  /* Color of the links */
+  color: black;
+  /* Necessary for transforming the scale of the buttons because it allows the element to be 
+  treated as a block-level element while still flowing inline within the text so TLDR make 
+  <a> a inline element be treated as a block-level elements (div, p, h1 etc) */
+  display: inline-block;
+  /* This will make the color change smoothly when hovered */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#navigation_bottom .navbar li {
-  padding: 10px 0;
-  font-weight: bold;
-}
-
+/* Hover effect for the navbar items that does not have the id 'current-page' */
 .navbar_item a:not(#current-page):hover {
-  /* The color of the link when hovered */
+  /* Color of the link when hovered */
   color: rgb(93, 92, 92);
   /* Increase the size of the link when hovered */
   transform: scale(1.1);
 }
 
-.navbar_item a {
-  /* Remove the underline of the link */
+#current-page {
+  /* Color of the current page */
+  color: rgb(164, 163, 163);
+}
+
+#top .navbar li {
+  /* The space inbetween the ordered items */
+  /* Using vw for responsive spacing, vw (viewport width) equals to % of viewport width.*/
+  margin: 0px 2vw;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#navigation_bottom .navbar li {
+  /* Padding for the top and buttom of the buttom navigation buttons */
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ------------------------- STICKY NAVIGATION ----------------------------- */
+
+#sticky_nav {
+  /* Position the navigation bar at the top of the screen */
+  /* Make the bottom navigation bar follow along when scolling down */
+  position: sticky;
+  /* The navigation bar will always be at the top of the screen */
+  top: 0;
+  /* z-index is used to make sure that the overlay is on top of the other elements */
+  z-index: 9999;
+  background-color: #e2e0d1;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  margin-top: 1px;
+}
+
+/* ------------------------- HAMBURGER ICON ----------------------------- */
+
+.hamburger-icon {
+  /* Hide the hamburger icon when the screen is larger than 768px */
+  display: none;
+  /* Positioning the hamburger icon */
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+/* Change the color of the hamburger icon when clicked */
+.hamburger-icon:active {
+  color: white;
+}
+
+/* ------------------------- SIDE BAR ----------------------------- */
+
+.sidebar_off_screen {
+  /* Position the sidebar off the screen (relative to the viewport) */
+  position: fixed;
+  /* The sidebar will be at the top of the screen */
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  overflow-x: auto;
+  /* Transition effect for the sidebar */
+  transition: 0.3s ease;
+  z-index: 10000;
+}
+
+.sidebar_off_screen.show {
+  /* Slide the sidebar into the screen */
+  left: 0;
+}
+
+.no-scroll {
+  /* Prevent the user from scrolling the body when the sidebar is open */
+  overflow: hidden;
+}
+
+/* ------------------------- HAMBURGER BAR ----------------------------- */
+
+.ham_bar {
+  /* Flexbox layout for the hamburger menu items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ham_item a {
+  /* font size of the hamburger menu items */
+  font-size: 1rem;
+}
+
+#top_ham_bar {
+  /* Postioning for the top hamburger items */
+  height: 50px;
+  padding: 20px 0;
+  padding-bottom: 50px;
+}
+
+#flex_name {
+  /* Flexbox layout for the name of the hotel */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.ham_item {
+  padding: 15px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.ham_item a {
+  color: white;
   text-decoration: none;
-  /* The color of the link */
-  color: black;
-  display: inline-block;
+  display: flex;
   transition: color 0.3s ease, transform 0.3s;
 }
 
-/* CSS for smaller screens */
+.ham_item a:not(#current-page):hover {
+  color: rgb(93, 92, 92);
+  transform: scale(1.1);
+}
+
+/* ------------------------- SLIDEBAR CLOSE ICON ----------------------------- */
+
+.close_icon {
+  color: white;
+  font-size: 1.5rem;
+  /* Position the close icon at the top right of the sidebar */
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close_icon:active {
+  color: rgb(93, 92, 92);
+}
+
+/* ------------------------- MEDIA QUERIES ----------------------------- */
+
 @media screen and (max-width: 768px) {
-  #top {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-  }
-
-  #top .navbar {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #top .navbar li {
-    padding: 10px 15px;
-  }
-
-  #top .navbar li,
-  #navigation_bottom .navbar li {
-    margin: 10px 0;
-  }
-
-  #navigation_bottom .navbar li {
-    padding: 0;
-  }
-
   .navbar {
+    /* Hide the regular navigation */
+    display: none;
+  }
+
+  #sticky_nav {
+    /* Remove the border from the sticky navigation */
+    border: none;
+  }
+
+  .hamburger-icon {
+    /* Show the hamburger icon */
+    display: flex;
+  }
+
+  .logo {
+    /* Position the logo in the center of the screen */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo_name {
+    /* Centerlised the 'Singapore' text */
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #sticky_nav {
-    position: relative;
+  .logo li h1 {
+    font-size: 1.1rem;
+  }
+
+  header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+  }
+
+  #top {
+    /* top bar height */
+    min-height: 60px;
   }
 }
 
-#current-page {
-  color: rgb(164, 163, 163);
+@media screen and (max-width: 425px) {
+  .logo li h1 {
+    font-size: 1rem;
+  }
 }
 
-/* End of Nav */
+/* ------------------------- Footer ----------------------------- */
 
-/* Start of footer*/
 footer {
   background-color: #333;
   color: white;
   padding-top: 10px;
+  min-width: 300px;
 }
 
 footer .footer-content {
   display: flex;
-  justify-content: space-between;
-  padding-left: 20px;
+  flex-wrap: wrap; /* Allow flex items to wrap when not enough space*/
 }
 
 .contact-info,
 .social-media,
 .quick-links {
-  width: 30%;
-  flex: 1;
+  width: 24%;
+  min-width: 190px; /* Ensure a minimum width for each section */
+  margin: 10px auto; /* Center the content within the container and top bottom spacing*/
+  text-align: center; /* Center the text */
 }
 
-.social-media h1 {
-  font-size: 1.2em;
-  width: 15%;
-  border-bottom: 1px solid white;
-  margin-bottom: 10px;
-}
-
+.quick-links h1,
+.social-media h1,
 .contact-info h1 {
-  font-size: 1.2em;
-  width: 40%;
-  border-bottom: 1px solid white;
+  font-size: 1.2rem;
+  position: relative; /* Parent for ::after pseudo-element*/
   margin-bottom: 10px;
+  text-align: center; /* Center the content within the container */
 }
 
-.quick-links h1 {
-  font-size: 1.2em;
-  width: 25%;
-  border-bottom: 1px solid white;
-  margin-bottom: 10px;
+.contact-info h1::after,
+.social-media h1::after,
+.quick-links h1::after {
+  content: '';
+  display: block; /* Make the ::after pseudo-element a block-level element */
+  width: 100px; /* Fixed width for the border */
+  border-bottom: 1px solid white; /* Block level element can have border */
+  position: absolute;
+  bottom: -5px; /* Position to be placed right beneath the h1 text */
+  left: 50%; /* Place it at the center of h1 */
+  transform: translateX(-50%);
 }
 
 .quick-links li {
-  list-style: none;
+  list-style: none; /* Remove the bullet points */
   color: white;
-}
-
-.quick-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9em;
-  display: inline-block;
-  transition: color 0.3s ease, transform 0.3s;
 }
 
 .social-media a,
-.contact-info p {
+.contact-info p,
+.quick-links li a {
   text-decoration: none;
-  padding: 3px 0px;
+  padding: 3px 0px; /* Padding for the top and bottom of the individual text */
   display: flex;
-  width: 30%;
+  width: 100%;
   color: white;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   transition: color 0.3s ease, transform 0.3s;
+  display: inline-block; /* Make the link a block-level element so that it can use width*/
 }
 
 footer .social-media i {
-  padding-top: 5px;
-  padding-right: 10px;
-}
+  padding-top: 5px; /* Padding for the top of the icon */
+  padding-right: 10px; /* Padding for the right of the icon */
+} 
 
 footer .footer-end {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
+  margin-top: 20px; /* Spacing from the content above */
+  padding-top: 10px; /* Spacing from the border */
   padding-bottom: 10px;
   border-top: 1px solid #e2e0d1;
 }
@@ -233,40 +366,3 @@ footer .quick-links li a:hover {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 768px) {
-  .contact-info,
-  .social-media,
-  .quick-links {
-    width: 50%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact-info h1,
-  .social-media h1,
-  .quick-links h1 {
-    font-size: 1.5em;
-    width: 83%;
-  }
-
-  .contact-info p,
-  .social-media .icons {
-    font-size: 1em;
-    width: 83%;
-  }
-
-  .social-media a {
-    width: 100%;
-  }
-
-  .quick-links li {
-    font-size: 1.1em;
-  }
-
-  footer .footer-end {
-    font-size: 1.1em;
-  }
-}
-
-/*End of Footer*/

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Château Herâld - Suites</title>
     <link rel="stylesheet" href="common.css" type="text/css" />
-    <link rel="shortcut icon" href="images\icon.png" alt="icon">
+    <link rel="shortcut icon" href="images\icon.png" alt="icon" />
     <link rel="stylesheet" href="suites.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -18,34 +18,67 @@
 
   <body>
     <header>
-        <section id="top">
-          <div class="logo">
-            <ul class="logo__name">
-              <li>
-                <h1>Château Herâld</h1>
-              </li>
-              <li>Singapore</li>
-            </ul>
+      <section id="top">
+        <div class="logo" id="top_logo">
+          <ul class="logo_name">
+            <li><h1>Château Herâld</h1></li>
+            <li>Singapore</li>
+          </ul>
+        </div>
+
+        <!-- Hamburger icon (Hidden - appear for smaller screen) -->
+        <div class="hamburger-icon" id="hamburger-icon">☰</div>
+
+        <!-- Hamburger navbar (Hidden - appear when ham icon pressed) -->
+        <nav id="sidebar_off_screen" class="sidebar_off_screen">
+          <!--Top Hamburger Bar items-->
+          <div id="top_ham_bar">
+            <div class="logo">
+              <ul class="logo_name" id="flex_name">
+                <li><h1>Château Herâld</h1></li>
+                <li>Singapore</li>
+              </ul>
+            </div>
+            <div class="close_icon" id="close_icon">✖</div>
           </div>
 
-          <div id="navigation_top">
-            <ul class="navbar">
-              <li class="navbar_item"><a href="contactform.html">Contact Us</a></li>
-              <li class="navbar_item"><a href="roombooking.html">Book a Stay</a></li>
-            </ul>
-          </div>
-        </section>
+          <!-- Hamburger Navigation items-->
+          <ul class="ham_bar">
+            <li class="ham_item"><a href="roombooking.html">Book Now</a></li>
+            <li class="ham_item"><a href="contactform.html">Contact Us</a></li>
+            <li class="ham_item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="ham_item"><a href="suites.html" id="current-page">Suites</a></li>
+            <li class="ham_item"><a href="events.html">Events</a></li>
+            <li class="ham_item"><a href="dining.html">Dining</a></li>
+            <li class="ham_item"><a href="Facilities.html">Amenities</a></li>
+            <li class="ham_item"><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="top_buttons">
+          <ul class="navbar" id="navbar">
+            <li class="navbar_item">
+              <a href="contactform.html">Contact Us</a>
+            </li>
+            <li class="navbar_item">
+              <a href="roombooking.html">Book a Stay</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </header>
 
     <section id="sticky_nav">
       <nav id="navigation_bottom">
         <ul class="navbar">
-          <li class="navbar_item"><a href="index.html">Home</a></li>
+          <li class="navbar_item">
+            <a href="index.html">Home</a>
+          </li>
           <li class="navbar_item"><a href="suites.html" id="current-page">Suites</a></li>
           <li class="navbar_item"><a href="events.html">Events</a></li>
-          <li class="navbar_item">
-            <a href="dining.html" >Dining</a>
-          </li>
+          <li class="navbar_item"><a href="dining.html">Dining</a></li>
           <li class="navbar_item"><a href="Facilities.html">Amenities</a></li>
           <li class="navbar_item"><a href="aboutus.html">About Us</a></li>
         </ul>
@@ -53,147 +86,164 @@
     </section>
 
     <div id="background">
-        <section id="header-text">
-          
-          <h1>SUITES</h1>
-          <h2>AN EXPERIENCE THAT MAKES YOU FEEL <span class="stylish">regal</span></h2>
-        </section>
-      </div>
-  
-      <section id="dining-intro">
-        <h2>Experience Unparalelled Comfort when you stay with us. </h2>
-        <p>Explore enchanting apartments with garden views and Suites featuring antiques, teakwood flooring and intriguing memorabilia, all housed within the building's distinctive colonial style architecture and original 14-foot ceilings. All adapted for contemporary tastes while retaining Château Herâlds' signature flair and ageless elegance.</p>
+      <section id="header-text">
+        <h1>SUITES</h1>
+        <h2>
+          AN EXPERIENCE THAT MAKES YOU FEEL <span class="stylish">regal</span>
+        </h2>
+      </section>
+    </div>
 
+    <section id="dining-intro">
+      <h2>Experience Unparalelled Comfort when you stay with us.</h2>
+      <p>
+        Explore enchanting apartments with garden views and Suites featuring
+        antiques, teakwood flooring and intriguing memorabilia, all housed
+        within the building's distinctive colonial style architecture and
+        original 14-foot ceilings. All adapted for contemporary tastes while
+        retaining Château Herâlds' signature flair and ageless elegance.
+      </p>
+    </section>
+
+    <section class="dining-options">
+      <section class="dining-option">
+        <img
+          src="images/standardroom.jpg"
+          alt="Image of our standard rooms"
+          class="dining-img"
+        />
+        <h3>Standard Rooms</h3>
+        <p>
+          Designed to effortlessly indulge the senses, the spacious Deluxe Rooms
+          radiate absolute sophistication and elegance. The accommodation has a
+          separate deep soak bathtub, among many other unique amenities..<br /><br /><a
+            href="#restaurant"
+            >Learn More</a
+          >
+        </p>
       </section>
-  
-      <section class="dining-options">
-        <section class="dining-option">
-          <img
-            src="images/standardroom.jpg"
-            alt="Image of our standard rooms"
-            class="dining-img"
-          />
-          <h3>Standard Rooms</h3>
-          <p>
-            Designed to effortlessly indulge the senses, the spacious Deluxe Rooms radiate absolute sophistication and elegance. The accommodation has a separate deep soak bathtub, among many other unique amenities..<br /><br /><a href="#restaurant" >Learn More</a>
-          </p>
-        </section>
-  
-        <section class="dining-option">
-          <img
-            src="images/deluxeroom.jpg"
-            alt="Image of our deluxe room"
-            class="dining-img"
-          />
-          <h3>Deluxe Rooms</h3>
-          <p>
-            Experience the Peranakan-inspired Signature Suite, which features two private balconies with views of the city, a large separate lounge area, and a welcoming atmosphere. Every tourist can experience luxury and comfort in this spacious studio with thoughtful amenities.
-<br /><br /><a href="#bar">Learn More</a>
-          </p>
-        </section>
-  
-        <section class="dining-option">
-          <img
-            src="images/suite.jpg"
-            alt="Image of our suites"
-            class="dining-img"
-          />
-          <h3>Supreme Suite</h3>
-          <p>
-            The Supreme Suite, designed with the understated elegance that is characteristic of the Herald name, has two separate balconies, a roomy living area, and a bedroom with high-end wood and leather furnishings. <br /><br /><a href="#room-service">Learn More</a>
-          </p>
-        </section>
+
+      <section class="dining-option">
+        <img
+          src="images/deluxeroom.jpg"
+          alt="Image of our deluxe room"
+          class="dining-img"
+        />
+        <h3>Deluxe Rooms</h3>
+        <p>
+          Experience the Peranakan-inspired Signature Suite, which features two
+          private balconies with views of the city, a large separate lounge
+          area, and a welcoming atmosphere. Every tourist can experience luxury
+          and comfort in this spacious studio with thoughtful amenities.
+          <br /><br /><a href="#bar">Learn More</a>
+        </p>
       </section>
-  
-      <section id="restaurant">
-        <img src="images/suite.jpg" alt="Image of our supreme suite" />
-        <div id="info">
-            <h1>Our Deluxe Rooms</h1>
-          <h2>
-            Our deluxe rooms are carefully crafted to ensure that our guests enjoy the epitome of luxury and comfort while staying with us.
-          </h2>
-          <p>
-            <a
-              href="roombooking.html"
-              target="_blank"
-              class="reserve-button"
-              >BOOK HERE</a
+
+      <section class="dining-option">
+        <img
+          src="images/suite.jpg"
+          alt="Image of our suites"
+          class="dining-img"
+        />
+        <h3>Supreme Suite</h3>
+        <p>
+          The Supreme Suite, designed with the understated elegance that is
+          characteristic of the Herald name, has two separate balconies, a roomy
+          living area, and a bedroom with high-end wood and leather furnishings.
+          <br /><br /><a href="#room-service">Learn More</a>
+        </p>
+      </section>
+    </section>
+
+    <section id="restaurant">
+      <img src="images/suite.jpg" alt="Image of our supreme suite" />
+      <div id="info">
+        <h1>Our Deluxe Rooms</h1>
+        <h2>
+          Our deluxe rooms are carefully crafted to ensure that our guests enjoy
+          the epitome of luxury and comfort while staying with us.
+        </h2>
+        <p>
+          <a href="roombooking.html" target="_blank" class="reserve-button"
+            >BOOK HERE</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section id="bar">
+      <img src="images/deluxeroom.jpg" alt="Image of our deluxe room" />
+      <div id="info">
+        <h1>Supreme Suites</h1>
+        <h2>
+          Where comfort is reinvented. Our supreme suites are carefully crafted
+          to ensure that our guests enjoy the epitome of luxury and comfort
+          while staying with us.
+        </h2>
+        <p>
+          <a href="roombooking.html" target="_blank" class="reserve-button"
+            >BOOK HERE</a
+          >
+        </p>
+      </div>
+    </section>
+    <section id="bar">
+      <img src="images/standardroom.jpg" alt="Image of our standard room" />
+      <div id="info">
+        <h1>Standard Rooms</h1>
+        <h2>
+          Our standard rooms, where comfort and luxury meets affordability. Our
+          standard rooms aim to provide those on a budget with the comfort
+          unparalelled at the same price point.
+        </h2>
+        <p>
+          <a href="roombooking.html" target="_blank" class="reserve-button"
+            >BOOK HERE</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <section class="footer-content">
+        <section class="contact-info" id="contacts">
+          <h1>Contact Infomation</h1>
+          <p>Email: info@chateauherald.com</p>
+          <p>Location: 123 Main St, Singapore</p>
+          <p>Phone: +65 1234 5678</p>
+        </section>
+        <section class="social-media" id="socials">
+          <h1>Socials</h1>
+          <div class="icons">
+            <a href="https://www.facebook.com/chateauherald"
+              ><i class="fa-brands fa-square-facebook"></i>@Château Herald</a
             >
-          </p>
-        </div>
-      </section>
-  
-      <section id="bar">
-        
-        <img src="images/deluxeroom.jpg" alt="Image of our deluxe room" />
-        <div id="info">
-            <h1>Supreme Suites</h1>
-          <h2>Where comfort is reinvented. Our supreme suites are carefully crafted to ensure that our guests enjoy the epitome of luxury and comfort while staying with us.  </h2>
-          <p>
-           
-              <a
-              href="roombooking.html"
-              target="_blank"
-              class="reserve-button"
-              >BOOK HERE</a>
-          </p>
-        </div>
-      </section>
-      <section id="bar">
-        
-        <img src="images/standardroom.jpg" alt="Image of our standard room" />
-        <div id="info">
-            <h1>Standard Rooms</h1>
-          <h2>Our standard rooms, where comfort and luxury meets affordability. Our standard rooms aim to provide those on a budget with the comfort unparalelled at the same price point.</h2>
-          <p>
-           
-              <a
-              href="roombooking.html"
-              target="_blank"
-              class="reserve-button"
-              >BOOK HERE</a>
-          </p>
-        </div>
-      </section>
-  
-      <footer>
-        <section class="footer-content">
-          <section class="contact-info" id="contacts">
-            <h1>Contact Infomation</h1>
-            <p>Email: info@chateauherald.com</p>
-            <p>Location: 123 Main St, Singapore</p>
-            <p>Phone: +65 1234 5678</p>
-          </section>
-          <section class="social-media" id="socials">
-            <h1>Socials</h1>
-            <div class="icons">
-              <a href="https://www.facebook.com/chateauherald"
-                ><i class="fa-brands fa-square-facebook"></i>@Château Herald</a
-              >
-              <a href="https://www.tiktok.com/chateauherald"
-                ><i class="fa-brands fa-tiktok"></i>@Herald Hotel</a
-              >
-              <a href="https://www.instagram.com/chateauherald"
-                ><i class="fa-brands fa-instagram"></i>@Château Hotel</a
-              >
-              <!-- Add more social media links as needed -->
-            </div>
-          </section>
-          <section class="quick-links">
-            <h1>Quick Links</h1>
-            <ul>
-              <li><a href="suites.html">Suites</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="dining.html">Dining</a></li>
-              <li><a href="Facilities.html">Amenities</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
-            </ul>
-          </section>
+            <a href="https://www.tiktok.com/chateauherald"
+              ><i class="fa-brands fa-tiktok"></i>@Herald Hotel</a
+            >
+            <a href="https://www.instagram.com/chateauherald"
+              ><i class="fa-brands fa-instagram"></i>@Château Hotel</a
+            >
+            <!-- Add more social media links as needed -->
+          </div>
         </section>
-  
-        <div class="footer-end">
-          <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
-        </div>
-      </footer>
-    </body>
-  </html>
+        <section class="quick-links">
+          <h1>Quick Links</h1>
+          <ul>
+            <li><a href="suites.html">Suites</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="Facilities.html">Amenities</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </section>
+      </section>
+
+      <div class="footer-end">
+        <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Ensures that DOM is fully loaded before script executes-->
+    <script src="burgericon.js"></script>
+  </body>
+</html>

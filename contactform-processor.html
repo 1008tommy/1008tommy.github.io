@@ -1,25 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<title>Form Confirmation</title>
-</head>
-<body>
-<script type="text/javascript">
-<!-- HIDE FROM INCOMPATIBLE BROWSERS
-document.write("<h1>Your reservation has been submitted successfully!</h1><h2>The following are the details you have entered:</h2>");
-var formData = location.search;
+  <head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Confirmation</title>
+    <link rel="stylesheet" href="common.css" type="text/css" />
+    <link rel="shortcut icon" href="images/icon.png" alt="icon" />
+    <link rel="stylesheet" href="contactform.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+	<style>
+		#contact-form {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		  text-align: center;
+		  margin: 50px auto;
+		  min-width: 200px;
+		}
+		#contact-form h1,
+		#contact-form h2,
+		#contact-form p {
+		  margin: 10px 0;
+		}
+	  </style>
+  </head>
+  <body>
+	<header>
+		<section id="top">
+		  <div class="logo" id="top_logo">
+			<ul class="logo_name">
+			  <li><h1>Château Herâld</h1></li>
+			  <li>Singapore</li>
+			</ul>
+		  </div>
+		  <div class="hamburger-icon" id="hamburger-icon">☰</div>
+		  <nav id="sidebar_off_screen" class="sidebar_off_screen">
+			<div id="top_ham_bar">
+			  <div class="logo">
+				<ul class="logo_name" id="flex_name">
+				  <li><h1>Château Herâld</h1></li>
+				  <li>Singapore</li>
+				</ul>
+			  </div>
+			  <div class="close_icon" id="close_icon">✖</div>
+			</div>
+			<ul class="ham_bar">
+			  <li class="ham_item"><a href="roombooking.html">Book Now</a></li>
+			  <li class="ham_item"><a href="contactform.html" id="current-page">Contact Us</a></li>
+			  <li class="ham_item"><a href="index.html">Home</a></li>
+			  <li class="ham_item"><a href="suites.html">Suites</a></li>
+			  <li class="ham_item"><a href="events.html">Events</a></li>
+			  <li class="ham_item"><a href="dining.html">Dining</a></li>
+			  <li class="ham_item"><a href="Facilities.html">Amenities</a></li>
+			  <li class="ham_item"><a href="aboutus.html">About Us</a></li>
+			</ul>
+		  </nav>
+		  <div class="top_buttons">
+			<ul class="navbar" id="navbar">
+			  <li class="navbar_item">
+				<a href="contactform.html">Contact Us</a>
+			  </li>
+			  <li class="navbar_item">
+				<a href="roombooking.html">Book a Stay</a>
+			  </li>
+			</ul>
+		  </div>
+		</section>
+	  </header>
+	  <section id="sticky_nav">
+		<nav id="navigation_bottom">
+		  <ul class="navbar">
+			<li class="navbar_item"><a href="index.html" id="current-page">Home</a></li>
+			<li class="navbar_item"><a href="suites.html">Suites</a></li>
+			<li class="navbar_item"><a href="events.html">Events</a></li>
+			<li class="navbar_item"><a href="dining.html">Dining</a></li>
+			<li class="navbar_item"><a href="Facilities.html">Amenities</a></li>
+			<li class="navbar_item"><a href="aboutus.html">About Us</a></li>
+		  </ul>
+		</nav>
+	  </section>
+	  <div id="background">
+		<section id="header-text">
+		  <h1>CONTACT US</h1>
+		</section>
+	  </div>
 
-formData = formData.substring(1, formData.length);
-while (formData.indexOf("+") != -1) {
-	formData = formData.replace("+", " ");
-}
-formData = unescape(formData);
-var formArray = formData.split("&");
-for (var i=0; i < formArray.length; ++i) {
-	document.writeln(formArray[i] + "<br />");
-}
-// STOP HIDING FROM INCOMPATIBLE BROWSERS -->
-</script>
-</body>
-</html>
+		<section id="contact-form">
+		</section>
+
+		<footer>
+			<section class="footer-content">
+			  <section class="contact-info" id="contacts">
+				<h1>Contact Infomation</h1>
+				<p>Email: info@chateauherald.com</p>
+				<p>Location: 123 Main St, Singapore</p>
+				<p>Phone: +65 1234 5678</p>
+			  </section>
+			  <section class="social-media" id="socials">
+				<h1>Socials</h1>
+				<div class="icons">
+				  <a href="https://www.facebook.com/chateauherald"
+					><i class="fa-brands fa-square-facebook"></i>@Château Herald</a
+				  >
+				  <a href="https://www.tiktok.com/chateauherald"
+					><i class="fa-brands fa-tiktok"></i>@Herald Hotel</a
+				  >
+				  <a href="https://www.instagram.com/chateauherald"
+					><i class="fa-brands fa-instagram"></i>@Château Hotel</a
+				  >
+				</div>
+			  </section>
+			  <section class="quick-links">
+				<h1>Quick Links</h1>
+				<ul>
+				  <li><a href="suites.html">Suites</a></li>
+				  <li><a href="events.html">Events</a></li>
+				  <li><a href="dining.html">Dining</a></li>
+				  <li><a href="Facilities.html">Amenities</a></li>
+				  <li><a href="aboutus.html">About Us</a></li>
+				</ul>
+			  </section>
+			</section>
+			<div class="footer-end">
+			  <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
+			</div>
+		  </footer>
+		  <script src="burgericon.js"></script>
+		  <script src="contactFormProcessor.js"></script>
+		</body>
+	  </html>
+		
+		</body>
+	  </html>

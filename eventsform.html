@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Château Herâld - Event Booking</title>
     <link rel="stylesheet" href="common.css" type="text/css" />
-    <link rel="shortcut icon" href="images\icon.png" alt="icon">
+    <link rel="shortcut icon" href="images\icon.png" alt="icon" />
     <link rel="stylesheet" href="eventsform.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -19,19 +19,53 @@
   <body>
     <header>
       <section id="top">
-        <div class="logo">
-          <ul class="logo__name">
+        <div class="logo" id="top_logo">
+          <ul class="logo_name">
             <li><h1>Château Herâld</h1></li>
             <li>Singapore</li>
           </ul>
         </div>
 
-        <div id="navigation_top">
-          <ul class="navbar">
-            <li class="navbar_item"><a href="contactform.html">Contact Us</a></li>
-            <li class="navbar_item"><a href="roombooking.html">Book a Stay</a></li>
+        <!-- Hamburger icon (Hidden - appear for smaller screen) -->
+        <div class="hamburger-icon" id="hamburger-icon">☰</div>
+
+        <!-- Hamburger navbar (Hidden - appear when ham icon pressed) -->
+        <nav id="sidebar_off_screen" class="sidebar_off_screen">
+          <!--Top Hamburger Bar items-->
+          <div id="top_ham_bar">
+            <div class="logo">
+              <ul class="logo_name" id="flex_name">
+                <li><h1>Château Herâld</h1></li>
+                <li>Singapore</li>
+              </ul>
+            </div>
+            <div class="close_icon" id="close_icon">✖</div>
+          </div>
+
+          <!-- Hamburger Navigation items-->
+          <ul class="ham_bar">
+            <li class="ham_item"><a href="roombooking.html">Book Now</a></li>
+            <li class="ham_item"><a href="contactform.html">Contact Us</a></li>
+            <li class="ham_item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="ham_item"><a href="suites.html">Suites</a></li>
+            <li class="ham_item"><a href="events.html" id="current-page">Events</a></li>
+            <li class="ham_item"><a href="dining.html">Dining</a></li>
+            <li class="ham_item"><a href="Facilities.html">Amenities</a></li>
+            <li class="ham_item"><a href="aboutus.html">About Us</a></li>
           </ul>
-        </div>
+        </nav>
+
+        <div class="top_buttons">
+          <ul class="navbar" id="navbar">
+            <li class="navbar_item">
+              <a href="contactform.html">Contact Us</a>
+            </li>
+            <li class="navbar_item">
+              <a href="roombooking.html">Book a Stay</a>
+            </li>
+          </ul>
         </div>
       </section>
     </header>
@@ -41,7 +75,9 @@
         <ul class="navbar">
           <li class="navbar_item"><a href="index.html">Home</a></li>
           <li class="navbar_item"><a href="suites.html">Suites</a></li>
-          <li class="navbar_item"><a href="events.html" id="current-page">Events</a></li>
+          <li class="navbar_item">
+            <a href="events.html" id="current-page">Events</a>
+          </li>
           <li class="navbar_item"><a href="dining.html">Dining</a></li>
           <li class="navbar_item"><a href="Facilities.html">Amenities</a></li>
           <li class="navbar_item"><a href="aboutus.html">About Us</a></li>
@@ -178,5 +214,7 @@
         <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
       </div>
     </footer>
+    <!-- Ensures that DOM is fully loaded before script executes-->
+    <script src="burgericon.js"></script>
   </body>
 </html>

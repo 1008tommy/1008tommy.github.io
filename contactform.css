@@ -4,9 +4,13 @@ body {
 
 #background {
     background-image: url(images/contactformhotelpicture.jpg);
-    background-size: cover;
-    position: relative;
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Used for ::afer */
     height: 350px;
+    width: 100%;
+    min-width: 300px;
 }
 
 #background::after {
@@ -46,6 +50,7 @@ body {
     border: 2px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
 }
 
 #contact-form h2 {
@@ -94,7 +99,7 @@ body {
     background-color: #fff;
 }
 
-.form-group input:not([type=date],[type=time],[type=number]):focus:valid {
+.form-group input:focus:valid {
     background: rgba(255, 255,255,0.6) url(images/tick-icon.png) no-repeat;
     background-position:right 1% bottom 50%; 
     background-size:1.5em 1.5em;

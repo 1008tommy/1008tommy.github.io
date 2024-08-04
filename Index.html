@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Château Herâld - Home</title>
     <link rel="stylesheet" href="common.css" type="text/css" />
-    <link rel="shortcut icon" href="images\icon.png" alt="icon">
     <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="shortcut icon" href="images\icon.png" alt="icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -16,17 +16,49 @@
     />
   </head>
   <body>
+    <!-- Top Bar Section-->
     <header>
       <section id="top">
-        <div class="logo">
-          <ul class="logo__name">
+        <div class="logo" id="top_logo">
+          <ul class="logo_name">
             <li><h1>Château Herâld</h1></li>
             <li>Singapore</li>
           </ul>
         </div>
 
-        <div>
-          <ul class="navbar">
+        <!-- Hamburger icon (Hidden - appear for smaller screen) -->
+        <div class="hamburger-icon" id="hamburger-icon">☰</div>
+
+        <!-- Hamburger navbar (Hidden - appear when ham icon pressed) -->
+        <nav id="sidebar_off_screen" class="sidebar_off_screen">
+          <!--Top Hamburger Bar items-->
+          <div id="top_ham_bar">
+            <div class="logo">
+              <ul class="logo_name" id="flex_name">
+                <li><h1>Château Herâld</h1></li>
+                <li>Singapore</li>
+              </ul>
+            </div>
+            <div class="close_icon" id="close_icon">✖</div>
+          </div>
+
+          <!-- Hamburger Navigation items-->
+          <ul class="ham_bar">
+            <li class="ham_item"><a href="roombooking.html">Book Now</a></li>
+            <li class="ham_item"><a href="contactform.html" >Contact Us</a></li>
+            <li class="ham_item">
+              <a href="index.html" id="current-page">Home</a>
+            </li>
+            <li class="ham_item"><a href="suites.html">Suites</a></li>
+            <li class="ham_item"><a href="events.html">Events</a></li>
+            <li class="ham_item"><a href="dining.html">Dining</a></li>
+            <li class="ham_item"><a href="Facilities.html">Amenities</a></li>
+            <li class="ham_item"><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="top_buttons">
+          <ul class="navbar" id="navbar">
             <li class="navbar_item">
               <a href="contactform.html">Contact Us</a>
             </li>
@@ -36,13 +68,14 @@
       </section>
     </header>
 
+    <!-- Bottom Navigation Bar Section-->
     <section id="sticky_nav">
       <nav id="navigation_bottom">
         <ul class="navbar">
           <li class="navbar_item">
             <a href="index.html" id="current-page">Home</a>
           </li>
-          <li class="navbar_item"><a href="test/index_try.html">Suites</a></li>
+          <li class="navbar_item"><a href="suites.html">Suites</a></li>
           <li class="navbar_item"><a href="events.html">Events</a></li>
           <li class="navbar_item"><a href="dining.html">Dining</a></li>
           <li class="navbar_item"><a href="Facilities.html">Amenities</a></li>
@@ -51,6 +84,7 @@
       </nav>
     </section>
 
+    <!-- Video about our Hotel -->
     <section class="video-container">
       <video autoplay loop muted>
         <source src="Videos\HotelVideo.mp4" type="video/mp4" />
@@ -68,10 +102,18 @@
       </div>
     </section>
 
+    <!-- Main Content Section -->
     <main class="main">
       <section class="suites">
         <div class="suites-content">
-          <img src="images/standardroom.jpg" alt="Image of our Suite" />
+          <div class="image-container">
+            <div class="wrapper">
+              <img src="images/standardroom.jpg" alt="Image of our Suite" />
+              <img src="images/deluxeroom.jpg" alt="Image of our Suite" />
+              <img src="images/roombig.jpg" alt="Image of our Suite" />
+              <img src="images/standardroom.jpg" alt="Image of our Suite" />
+            </div>
+          </div>
           <div class="suites-text">
             <h2>Our Suites</h2>
             <h4>Unparalleled luxury</h4>
@@ -114,7 +156,7 @@
         <section class="experience-options" id="events">
           <section class="option">
             <img
-              src="..\images\weddings5.jpg"
+              src="images\weddings5.jpg"
               alt="Image of our restaurant"
               class="experience-img"
             />
@@ -126,7 +168,7 @@
                 dedicated team will ensure that every detail is meticulously
                 planned, creating an event that is truly unforgettable.
               </p>
-              <a href="events.html">See More</a>
+              <a href="events.html" class="experience-button">See More</a>
             </section>
           </section>
 
@@ -144,7 +186,7 @@
                 private dining experience. Our culinary experiences are a mise
                 en scène brought to life by experts of gastronomy and mixology.
               </p>
-              <a href="dining.html">See More</a>
+              <a href="dining.html" class="experience-button">See More</a>
             </section>
           </section>
 
@@ -162,12 +204,14 @@
                 spa facilities, we provide everything you need to relax and
                 rejuvenate.
               </p>
-              <a href="Facilities.html">See More</a>
+              <a href="Facilities.html" class="experience-button">See More</a>
             </section>
           </section>
         </section>
       </section>
     </main>
+
+    <!-- Footer Section -->
     <footer>
       <section class="footer-content">
         <section class="contact-info" id="contacts">
@@ -207,5 +251,8 @@
         <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Ensures that DOM is fully loaded before script executes-->
+    <script src="burgericon.js"></script>
   </body>
 </html>

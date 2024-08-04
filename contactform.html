@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Château Herâld - Contact Us</title>
     <link rel="stylesheet" href="common.css" type="text/css" />
-    <link rel="shortcut icon" href="images\icon.png" alt="icon">
+    <link rel="shortcut icon" href="images/icon.png" alt="icon" />
     <link rel="stylesheet" href="contactform.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -18,30 +18,50 @@
   <body>
     <header>
       <section id="top">
-        <div class="logo">
-          <ul class="logo__name">
+        <div class="logo" id="top_logo">
+          <ul class="logo_name">
             <li><h1>Château Herâld</h1></li>
             <li>Singapore</li>
           </ul>
         </div>
-
-        <div id="navigation_top">
-          <ul class="navbar">
+        <div class="hamburger-icon" id="hamburger-icon">☰</div>
+        <nav id="sidebar_off_screen" class="sidebar_off_screen">
+          <div id="top_ham_bar">
+            <div class="logo">
+              <ul class="logo_name" id="flex_name">
+                <li><h1>Château Herâld</h1></li>
+                <li>Singapore</li>
+              </ul>
+            </div>
+            <div class="close_icon" id="close_icon">✖</div>
+          </div>
+          <ul class="ham_bar">
+            <li class="ham_item"><a href="roombooking.html">Book Now</a></li>
+            <li class="ham_item"><a href="contactform.html" id="current-page">Contact Us</a></li>
+            <li class="ham_item"><a href="index.html">Home</a></li>
+            <li class="ham_item"><a href="suites.html">Suites</a></li>
+            <li class="ham_item"><a href="events.html">Events</a></li>
+            <li class="ham_item"><a href="dining.html">Dining</a></li>
+            <li class="ham_item"><a href="Facilities.html">Amenities</a></li>
+            <li class="ham_item"><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+        <div class="top_buttons">
+          <ul class="navbar" id="navbar">
             <li class="navbar_item">
-              <a href="contactform.html" id="current-page">Contact Us</a>
+              <a href="contactform.html">Contact Us</a>
             </li>
-            <li class="navbar_item"><a href="roombooking.html">Book a Stay</a></li>
+            <li class="navbar_item">
+              <a href="roombooking.html">Book a Stay</a>
+            </li>
           </ul>
         </div>
       </section>
     </header>
-
     <section id="sticky_nav">
       <nav id="navigation_bottom">
         <ul class="navbar">
-          <li class="navbar_item">
-            <a href="index.html">Home</a>
-          </li>
+          <li class="navbar_item"><a href="index.html" id="current-page">Home</a></li>
           <li class="navbar_item"><a href="suites.html">Suites</a></li>
           <li class="navbar_item"><a href="events.html">Events</a></li>
           <li class="navbar_item"><a href="dining.html">Dining</a></li>
@@ -50,19 +70,17 @@
         </ul>
       </nav>
     </section>
-
     <div id="background">
       <section id="header-text">
         <h1>CONTACT US</h1>
       </section>
     </div>
-
     <section id="contact-form">
       <h2>Contact Form</h2>
       <p>Have a question or feedback? Drop us a message below.</p>
       <form action="contactform-processor.html" method="GET" id="main-form">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Name*</label>
           <input
             type="text"
             id="name"
@@ -74,23 +92,23 @@
           />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your email"
-            required
+          <label for="email">Email*</label>
+          <input 
+          pattern="[A-Za-z0-9]+@[A-Za-z0-9]+\.[a-z]{2,}" 
+          id="email" 
+          required 
+          type="email" 
+          placeholder="Example@gmail.com"
           />
         </div>
         <div class="form-group">
-          <label for="phone">Phone</label>
+          <label for="phone">Phone*</label>
           <input
             type="tel"
             id="phone"
             name="phone"
-            pattern="\d{8}"
-            placeholder="Your 8-digit contact number"
+            pattern="[0-9]{8,}"
+            placeholder="Your contact number"
             required
           />
         </div>
@@ -106,7 +124,6 @@
         <button type="submit">Submit</button>
       </form>
     </section>
-
     <footer>
       <section class="footer-content">
         <section class="contact-info" id="contacts">
@@ -127,7 +144,6 @@
             <a href="https://www.instagram.com/chateauherald"
               ><i class="fa-brands fa-instagram"></i>@Château Hotel</a
             >
-            <!-- Add more social media links as needed -->
           </div>
         </section>
         <section class="quick-links">
@@ -141,10 +157,10 @@
           </ul>
         </section>
       </section>
-
       <div class="footer-end">
         <p>&copy; 2024 Château Herâld Hotel Singapore. All rights reserved.</p>
       </div>
     </footer>
+    <script src="burgericon.js"></script>
   </body>
 </html>
