@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display a message to the user that the form has been submitted successfully
     contactFormSection.innerHTML = `
       <h1>Your form has been submitted successfully!</h1>
+      <h2>Thank you for contacting us. We will get to you in 2-3 working days.</h2>
       <h2>The following are the details you have entered:</h2>
     `;
   
