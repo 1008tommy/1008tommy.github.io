@@ -8,7 +8,7 @@ body {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
     position: relative; /* Used for ::afer */
-    height: 350px;
+    height: 250px; /* Height of the background image */
     width: 100%;
     min-width: 300px;
 }
@@ -39,7 +39,7 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 200;
     font-size: 4em;
-    padding-bottom: 30px;
+    padding-bottom: 40px; /* Space between header text and below */
 }
 
 #contact-form {
@@ -49,7 +49,7 @@ body {
     margin: 40px auto;
     border: 2px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow to the form */
     min-width: 200px;
 }
 
@@ -89,17 +89,19 @@ body {
 }
 
 .form-group textarea {
-    resize: none;
+    resize: none; /* Disable resizing of textarea */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
+    /* Add a border around the input field when it is focused (User click on it)*/
     outline: none;
     border-color: #bbb;
     background-color: #fff;
 }
 
 .form-group input:focus:valid {
+    /* Add a tick icon when the input field is focused and valid (Correct format)*/
     background: rgba(255, 255,255,0.6) url(images/tick-icon.png) no-repeat;
     background-position:right 1% bottom 50%; 
     background-size:1.5em 1.5em;
@@ -122,7 +124,28 @@ button:hover {
 }
 
 .form-group input::placeholder {
+    /* Change the color of the placeholder text */
     font-style: italic;
     color:rgba(154, 154, 154, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+    #header-text h1 {
+        font-size: 3em;
+    }
+    #contact-form {
+        padding: 20px;
+    }
+    #contact-form h2 {
+        font-size: 1.5em;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+    }
+    button {
+        padding: 8px;
+    }
+    
 }
 

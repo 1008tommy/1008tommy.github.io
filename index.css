@@ -16,6 +16,7 @@
   width: 100%;
   height: 100vh;
   min-height: 500px; /* Make sure it doesn't go below this height*/
+  max-height: 700px;
   /* adjust the last value to change the opacity */
   background: rgba(0, 0, 0, 0.6);
 }
@@ -25,6 +26,7 @@ video,
   /* Set the size of the video */
   width: 100%;
   height: 100vh; /* vh stands for viewport height */
+  max-height: 700px; /* This will make sure the video doesn't go beyond 1000px */
   min-height: 500px;
   object-fit: cover; /* This will cover the whole area without distorting the aspect ratio */
   display: block; /* This will remove the default space below the video */
@@ -326,13 +328,13 @@ main {
 
 .experience h1{
   text-align: left;
-  font-size: 5vh;
+  font-size: 3vw;
   font-weight: bold;
   padding-top: 20px;
 }
 
 .experience p{
-  font-size: 2.4vh;
+  font-size: 1.2vw;
   padding-top: 20px;
   width: 60%;
 }
@@ -343,7 +345,7 @@ main {
 }
 
 .experience .option h3{
-  font-size: 3vh; 
+  font-size: 2vw; 
   font-weight: bold;
   padding-top: 10px;
 }
@@ -354,6 +356,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-bottom: 50px;
 }
 
 .option {
@@ -368,7 +371,6 @@ main {
 }
 
 .experience .option-text a{
-  margin-bottom: 20px;
   font-size: 1.1vw;
 }
 
@@ -415,7 +417,7 @@ main {
   }
 
   .experience .option-text p{
-    font-size: 0.9em;
+    font-size: 1em;
     width: 90%;
   }
 
@@ -423,7 +425,6 @@ main {
     font-size: 0.8em; 
   }
 }
-
 
 /* Smooth Flow */
 .suites,

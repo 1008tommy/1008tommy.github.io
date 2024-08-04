@@ -353,7 +353,6 @@ footer .footer-end {
   font-size: 0.8rem;
   text-align: center;
   margin-top: 20px; /* Spacing from the content above */
-  padding-top: 10px; /* Spacing from the border */
   padding-bottom: 10px;
   border-top: 1px solid #e2e0d1;
 }
@@ -364,5 +363,14 @@ footer .quick-links li a:hover {
   color: rgb(93, 92, 92);
   /* Increase the size of the link when hovered */
   transform: scale(1.1);
+}
+
+footer .footer-end p {
+  padding-top: 20px;
+}
+
+#map {
+  height: 200px;
+  width: 100%;
 }
 
